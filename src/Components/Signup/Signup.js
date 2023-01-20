@@ -22,7 +22,8 @@ const Signup = () => {
       email,
       password
     );
-    await updateProfile(user, { displayName: username });
+    await updateProfile(user, { displayName: username })
+    
     await addDoc(collection (db,"users"), {
       id: user.uid,
       username: username,
