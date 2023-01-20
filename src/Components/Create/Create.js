@@ -25,7 +25,7 @@ const Create = () => {
           price,
           url,
           userId: user.uid,
-          createdAt: date,
+          createdAt: date, 
         });
         navigate("/");
       });

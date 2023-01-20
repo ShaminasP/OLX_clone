@@ -5,10 +5,11 @@ import Signup from './Pages/Signup'
 import Login from './Pages/Login'
 import Home from './Pages/Home';
 import Create from './Pages/Create';
+import View from './Pages/ViewPost';
 import {AuthContext} from './Store/FirebaseContext'
 import {auth} from './Firebase/Config'
 import { onAuthStateChanged } from 'firebase/auth';
-
+import Post from './Store/PostContext';
 
 function App() {
   const {setUser}=useContext(AuthContext);
@@ -19,13 +20,17 @@ function App() {
   })
   return (
     <div>
-     <Routes>
+      <Post>
+      <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/create' element={<Create/>}/>
+      <Route path='/view' element={<View/>}/>
 
      </Routes>
+      </Post>
+    
     </div>
   );
 }

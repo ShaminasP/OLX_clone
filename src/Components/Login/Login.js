@@ -1,5 +1,5 @@
 import { async } from '@firebase/util';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React ,{useState} from 'react';
 import {auth} from '../../Firebase/Config'
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -52,7 +52,7 @@ function Login() {
           <br />
           <button>Login</button>
         </form>
-        <a>Signup</a>
+        <Link to="/Signup">Signup</Link>
       </div>
     </div>
   );
